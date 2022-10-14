@@ -3,7 +3,7 @@ import logo from "../assets/fondo.png";
 
 function Header() {
   return (
-    <header>
+    <header className="bg-bodyLight dark:bg-bodyDark">
       <div className="bg-auto bg-center px-8 md:px-20 lg:px-64">
         <img src={logo} alt="logo" />
       </div>

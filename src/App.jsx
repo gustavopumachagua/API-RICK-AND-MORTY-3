@@ -5,6 +5,7 @@ import { Main } from "./components/Main";
 import { Card } from "./components/Card";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
+import DarkMode from "./components/DarkMode";
 
 function App() {
   const API = "https://rickandmortyapi.com/api";
@@ -41,6 +42,7 @@ function App() {
   return (
     <>
       <Header />
+      <DarkMode />
       <SearchBar filterCharacters={filterCharacters} />
       <Main>
         {characters.map((character, index) => (
@@ -56,7 +58,6 @@ function App() {
         ))}
       </Main>
       <NavBar page={page} setPage={setPage}></NavBar>
-
       <Footer />
     </>
   );

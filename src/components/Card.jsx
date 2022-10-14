@@ -1,10 +1,15 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Card = ({ name, img, status, specie, dimension, created }) => {
   return (
     <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-2xl border-slate-800 border-2">
       <div className="h-full w-full">
-        <img
+        <LazyLoadImage
+          width="100%"
+          min-height="144"
+          effect="blur"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
           src={img}
           alt={name}
